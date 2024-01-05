@@ -14,10 +14,15 @@
         layout: 'products'
     })
 
-    console.log('dd')
-
     // fetch the products
-    const {data: products} = await useFetch('https://fakestoreapi.com/products')
+    const { data: products } = await useFetch('https://fakestoreapi.com/products')
+
+    useHead({
+        title: 'Nuxt Product | Products Showcase',
+        meta: [
+            { name: 'description', content: 'Nuxt products description' }
+        ]
+    })
 </script>
 
 <style lang="scss" scoped>
